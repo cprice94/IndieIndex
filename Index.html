@@ -1,0 +1,23 @@
+<html ng-app="IndieIndex">
+    <head>
+        <title>IndieIndex</title>
+        <base href="/"/>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body ng-controller="IndexController as vm">
+        <div>
+            Index page
+            <br/>
+            {{vm.message}}
+        </div>
+        <div>
+            <ui-view></ui-view>
+        </div>
+
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="client/scripts/out.js"></script>
+    </body>
+</html>

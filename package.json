@@ -1,0 +1,30 @@
+{
+  "name": "indieindex",
+  "version": "1.0.0",
+  "description": "Indie game index",
+  "scripts": {
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "start": "concurrently \"npm run lite\" \"npm run tsc:w\"",
+    "build": "concurrently \"npm run tsc\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cprice94/IndieIndex.git"
+  },
+  "author": "Chase Price",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cprice94/IndieIndex/issues"
+  },
+  "homepage": "https://github.com/cprice94/IndieIndex#readme",
+  "devDependencies": {
+    "@types/angular": "^1.6.3",
+    "@types/angular-ui-router": "^1.1.36",
+    "@types/bootstrap": "^3.3.32",
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.1.5"
+  }
+}

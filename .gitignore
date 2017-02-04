@@ -1,0 +1,6 @@
+node_modules
+bin
+obj
+bower_components
+.vscode
+debug.log
