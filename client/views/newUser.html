@@ -1,0 +1,133 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <div style="border-bottom-color:#428bca" class="page-header">
+                <h1>
+                    Sign Up
+                </h1>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                First Name
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="text" class="form-control" ng-model="vm.newUser.FirstName" />
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Last Name
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="text" class="form-control" ng-model="vm.newUser.LastName" />
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Email
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="email" class="form-control" ng-model="vm.newUser.Email" />
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Confirm Email
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="email" class="form-control" ng-model="vm.newUser.ConfirmEmail" />
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Password
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="password" class="form-control" ng-model="vm.newUser.Password" />
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Confirm Password
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="password" class="form-control" ng-model="vm.newUser.ConfirmPassword" />
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Username
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="text" class="form-control" ng-model="vm.newUser.Username" />
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Developer
+                            </dt>
+                            <dd class="form-group">
+                                <label style="padding:0px 2px 2px 3px" class="btn btn-primary">
+                                    <input ng-click="vm.isDev()" ng-model="vm.holder" style="width: 15px; height: 15px" type="checkbox" autocomplete="off">
+                                </label>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div id="devName" style="display:none" class="row">
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Developer Name
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="text" class="form-control" ng-model="vm.newUser.DeveloperName" />
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal" style="width:auto">
+                            <dt style="width: auto">
+                                Confirm Developer Name
+                            </dt>
+                            <dd class="form-group">
+                                <input style="width:235px" type="text" class="form-control" ng-model="vm.newUser.ConfirmDeveloperName" />
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <center style="margin-top: 49px">
+                    <button ng-click="vm.register()" class="btn btn-primary form-group">Submit</button>
+                    <button class="btn btn-default form-group">Cancel</button>
+                </center>
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>

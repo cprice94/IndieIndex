@@ -1,1 +1,55 @@
-The browse page
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <div style="border-bottom-color:#428bca" class="page-header">
+                <h1>
+                    Browse
+                </h1>
+            </div>
+            <ul class="list-unstyled">
+                <li ng-repeat="game in vm.games">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="pull-right" src="../../images/no_img.png" />
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <h3><a href="/Details/{{game.id}}">{{game.title}}</a></h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        Developer(s): Deveoper will go here
+                                    </div>
+                                    <div class="row">
+                                        Average Rating: {{game.averageRating}}
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        Release Date: {{game.releaseDate}}
+                                    </div>
+                                    <div class="row">
+                                        Type: {{game.gameType}}
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        Date Added: {{game.dateCreated | date : format : timezone }}
+                                    </div>
+                                    <div class="row">
+                                        Price Structure: {{game.priceStructure}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>

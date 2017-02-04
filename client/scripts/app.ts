@@ -23,7 +23,41 @@ namespace IndieIndex {
             controller: IndieIndex.Controllers.NewUserController,
             controllerAs: "vm"
         })
-        $urlRouterProvider.otherwise("/");
+        .state("AddGame", {
+            url: "/addGame",
+            templateUrl: "client/views/addGame.html",
+            controller: IndieIndex.Controllers.AddGameController,
+            controllerAs: "vm"
+        })
+        .state("EditGame", {
+            url: "/editGame",
+            templateUrl: "client/views/EditGame.html",
+            controller: IndieIndex.Controllers.EditGameController,
+            controllerAs: "vm"
+        })
+        .state("Profile", {
+            url: "/profile/:id",
+            templateUrl: "client/views/profile.html",
+            controller: IndieIndex.Controllers.ProfileController,
+            controllerAs: "vm"
+        })
+        .state("Details", {
+            url: "/details/:id",
+            templateUrl: "client/views/details.html",
+            controller: IndieIndex.Controllers.DetailsController,
+            controllerAs: "vm"
+        })
+        .state("YourGames", {
+            url: "/yourGames",
+            templateUrl: "client/views/yourGames.html",
+            controller: IndieIndex.Controllers.YourGamesController,
+            controllerAs: "vm"
+        })
+        .state("NotFound", {
+            url: "/notFound",
+            templateUrl: "client/views/notFound.html",
+        })
+        $urlRouterProvider.otherwise("/notFound");
         $locationProvider.html5Mode(true);
     });
 }

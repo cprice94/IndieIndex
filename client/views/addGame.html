@@ -1,0 +1,165 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <div style="border-bottom-color:#428bca" class="page-header">
+                <h1>
+                    Add Game
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Title
+                        </dt>
+                        <dd class="form-group">
+                            <input style="width:235px" type="text" class="form-control" ng-model="vm.game.title" />
+                        </dd>
+                     </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Download Url
+                        </dt>
+                        <dd class="form-group">
+                            <input style="width:235px" type="text" class="form-control" ng-model="vm.game.DlUrl" />
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Date Released
+                        </dt>
+                        <dd class="form-group">
+                            <div class="input-group date" data-date-autoclose="true" data-provide="datepicker">
+                                <input type="text" class="form-control" ng-model="vm.game.dateReleased">
+                                <div style="width:auto" class="input-group-addon test">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Release Stage
+                        </dt>
+                        <dd class="form-group">
+                            <select data-width="235px" data-style="btn-primary" class="selectpicker" ng-model="vm.game.releaseStage">
+                                <option>In Development</option>
+                                <option>Open Alpha</option>
+                                <option>Closed Alpha</option>
+                                <option>Open Beta</option>
+                                <option>Closed Beta</option>
+                                <option>Full Release</option>
+                            </select>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Game Type
+                        </dt>
+                        <dd class="form-group">
+                            <select data-width="235px" data-style="btn-primary" class="selectpicker" data-live-search="true" ng-model="vm.game.gameType">
+                                <option>Action</option>
+                                <option>Action-Adventure</option>
+                                <option>Adventure</option>
+                                <option>Role-Playing</option>
+                                <option>Simulation</option>
+                                <option>Strategy</option>
+                                <option>Sports</option>
+                                <option>MMO</option>
+                                <option>Casual</option>
+                                <option>Music</option>
+                                <option>Party</option>
+                                <option>Programming</option>
+                                <option>Logic</option>
+                                <option>Trivia</option>
+                                <option>Board</option>
+                                <option>Card</option>
+                            </select>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Price Structure
+                        </dt>
+                        <dd class="form-group">
+                            <select data-width="235px" data-style="btn-primary" class="selectpicker" ng-model="vm.game.priceStructure">
+                                <option value="f2p">Free to play</option>
+                                <option value="p2p">Pay to Play</option>
+                                <option value="b2p">Buy to Play</option>
+                            </select>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Developer(s)
+                        </dt>
+                        <dd class="form-group">
+                            {{vm.username}}
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                    </dl>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Description
+                        </dt>
+                        <dd class="form-group">
+                            <textarea rows="8" class="form-control test" id="message-text" ng-model="vm.game.description"></textarea>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Add Image(s)
+                        </dt>
+                        <dd class="form-group">
+                            <img class="form-group test" width="100" alt="No image" src="../../images/no_img.png" />
+                            <br />
+                            <button type="button" class="btn btn-primary">
+                                Upload
+                            </button>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <center style="margin-top: 49px">
+                <button class="btn btn-primary" ng-click="vm.save()">Add Game</button>
+                <button class="btn btn-default" ui-sref="YourGames">Cancel</button>
+            </center>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $('.selectpicker').selectpicker();
+  });
+</script>
