@@ -1,0 +1,30 @@
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+input[type=text] {
+   border-color: #428bca;
+   background-color: #d3d3d3;
+}
+
+input[type=email] {
+   border-color: #428bca;
+   background-color: #d3d3d3;   
+}
+
+input[type=password] {
+   border-color: #428bca;
+   background-color: #d3d3d3;
+}
+
+body {
+    padding-bottom: 20px;
+    background-color: #d3d3d3;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it does not close */
+ }

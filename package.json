@@ -21,6 +21,7 @@
   "homepage": "https://github.com/cprice94/IndieIndex#readme",
   "devDependencies": {
     "@types/angular": "^1.6.3",
+    "@types/angular-ui-bootstrap": "^0.13.39",
     "@types/angular-ui-router": "^1.1.36",
     "@types/bootstrap": "^3.3.32",
     "concurrently": "^3.1.0",

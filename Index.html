@@ -1,23 +1,78 @@
 <html ng-app="IndieIndex">
-    <head>
-        <title>IndieIndex</title>
-        <base href="/"/>
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    </head>
-    <body ng-controller="IndexController as vm">
-        <div>
-            Index page
-            <br/>
-            {{vm.message}}
-        </div>
-        <div>
-            <ui-view></ui-view>
-        </div>
 
-        <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="client/scripts/out.js"></script>
-    </body>
+<head>
+    <title>Indie Index</title>
+    <base href="/" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="client/css/site.css">
+</head>
+
+<body ng-controller="IndexController as vm">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ui-sref="Home">Indie Index</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="browse/toprated">Top Rated</a></li>
+                    <li><a href="browse/new">New Games</a></li>
+                    <li class="dropdown">
+                        <a href="/browse/" role="button">Browse<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/browse/action" role="button">Action</a></li>
+                            <li><a href="/browse/action-adventure" role="button">Action-Adventure</a></li>
+                            <li><a href="/browse/adventure" role="button">Adventure</a></li>
+                            <li><a href="/browse/role-playing" role="button">Role-Playing</a></li>
+                            <li><a href="/browse/simulation" role="button">Simulation</a></li>
+                            <li><a href="/browse/strategy" role="button">Strategy</a></li>
+                            <li><a href="/browse/sports" role="button">Sports</a></li>
+                            <li><a href="/browse/mmo" role="button">MMO</a></li>
+                            <li><a href="/browse/casual" role="button">Casual</a></li>
+                            <li><a href="/browse/music" role="button">Music</a></li>
+                            <li><a href="/browse/party" role="button">Party</a></li>
+                            <li><a href="/browse/programming" role="button">Programming</a></li>
+                            <li><a href="/browse/logic" role="button">Logic</a></li>
+                            <li><a href="/browse/trivia" role="button">Trivia</a></li>
+                            <li><a href="/browse/board" role="button">Board</a></li>
+                            <li><a href="/browse/card" role="button">Card</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form hidden-sm hidden-xs " role="search">
+                            <div class="form-group"><input type="text" class="form-control" /></div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </li>
+                    <li><a role="button" ng-click="vm.showModal()">Login</a></li>
+                    <li><a role="button" ui-sref="NewUser">Sign Up</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <div style="padding-top: 30px">
+        <ui-view></ui-view>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="client/scripts/out.js"></script>
+</body>
+
 </html>
