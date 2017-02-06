@@ -17,7 +17,7 @@
                         <dd class="form-group">
                             <input style="width:235px" type="text" class="form-control" ng-model="vm.game.title" />
                         </dd>
-                     </dl>
+                    </dl>
                 </div>
                 <div class="col-md-6">
                     <dl class="dl-horizontal">
@@ -25,7 +25,7 @@
                             Download Url
                         </dt>
                         <dd class="form-group">
-                            <input style="width:235px" type="text" class="form-control" ng-model="vm.game.DlUrl" />
+                            <input style="width:235px" type="text" class="form-control" ng-model="vm.game.downloadUrl" />
                         </dd>
                     </dl>
                 </div>
@@ -53,12 +53,7 @@
                         </dt>
                         <dd class="form-group">
                             <select data-width="235px" data-style="btn-primary" class="selectpicker" ng-model="vm.game.releaseStage">
-                                <option>In Development</option>
-                                <option>Open Alpha</option>
-                                <option>Closed Alpha</option>
-                                <option>Open Beta</option>
-                                <option>Closed Beta</option>
-                                <option>Full Release</option>
+                                <option ng-repeat="releaseStage in vm.dropdownData.releaseStage">{{releaseStage}}</option>
                             </select>
                         </dd>
                     </dl>
@@ -72,22 +67,7 @@
                         </dt>
                         <dd class="form-group">
                             <select data-width="235px" data-style="btn-primary" class="selectpicker" data-live-search="true" ng-model="vm.game.gameType">
-                                <option>Action</option>
-                                <option>Action-Adventure</option>
-                                <option>Adventure</option>
-                                <option>Role-Playing</option>
-                                <option>Simulation</option>
-                                <option>Strategy</option>
-                                <option>Sports</option>
-                                <option>MMO</option>
-                                <option>Casual</option>
-                                <option>Music</option>
-                                <option>Party</option>
-                                <option>Programming</option>
-                                <option>Logic</option>
-                                <option>Trivia</option>
-                                <option>Board</option>
-                                <option>Card</option>
+                                <option ng-repeat="gameType in vm.dropdownData.gameTypes">{{gameType}}</option>
                             </select>
                         </dd>
                     </dl>
@@ -99,9 +79,7 @@
                         </dt>
                         <dd class="form-group">
                             <select data-width="235px" data-style="btn-primary" class="selectpicker" ng-model="vm.game.priceStructure">
-                                <option value="f2p">Free to play</option>
-                                <option value="p2p">Pay to Play</option>
-                                <option value="b2p">Buy to Play</option>
+                                <option ng-repeat="priceStructure in vm.dropdownData.priceStructure">{{priceStructure}}</option>
                             </select>
                         </dd>
                     </dl>
@@ -140,7 +118,7 @@
                             Add Image(s)
                         </dt>
                         <dd class="form-group">
-                            <img class="form-group test" width="100" alt="No image" src="../../images/no_img.png" />
+                            <img class="form-group test" width="100" alt="No image" src="client/images/no_img.png" />
                             <br />
                             <button type="button" class="btn btn-primary">
                                 Upload
@@ -159,7 +137,5 @@
     </div>
 </div>
 <script>
-  $(document).ready(function () {
-    $('.selectpicker').selectpicker();
-  });
+      $(document).ready(function () { $('.selectpicker').selectpicker(); });
 </script>

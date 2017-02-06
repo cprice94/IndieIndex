@@ -6,17 +6,14 @@ textarea {
 
 input[type=text] {
    border-color: #428bca;
-   background-color: #d3d3d3;
 }
 
 input[type=email] {
    border-color: #428bca;
-   background-color: #d3d3d3;   
 }
 
 input[type=password] {
    border-color: #428bca;
-   background-color: #d3d3d3;
 }
 
 body {
